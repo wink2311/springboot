@@ -1,0 +1,39 @@
+●●●
+打包方式
+jar
+默认情况下，通过 maven 执行 package 命令后，会生成 jar 包，且该 jar 包会内置了 tomcat 容器，因此我们可以通过 java -jar 就可以运行项目，如下图：
+
+war
+让 SpringbootApplication 类继承 SpringBootServletInitializer 并重写 configure 方法，如下：
+
+@SpringBootApplication
+public class SpringbootApplication extends SpringBootServletInitializer {
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(SpringbootApplication.class);
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootApplication.class, args);
+    }
+}
+
+修改 pom.xml 文件，将 jar 改成 war，如下：
+
+<packaging>war</packaging>
+
+●●●
+Spring Boot 不仅支持常规的 properties 配置文件，还支持 yaml 语言的配置文件。
+yaml 是以数据为中心的语言，在配置数据的时候具有面向对象的特征。
+
+
+
+
+
+
+
+
+
+
+ 

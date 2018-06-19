@@ -1,0 +1,6 @@
+# 注意： yml 需要在 “:” 后加一个空格
+server: 
+  port: 8080
+name: wink
+age: 32
+content: "name:${name},age:${age}"
