@@ -4,3 +4,9 @@ server:
 name: wink
 age: 32
 content: "name:${name},age:${age}"
+
+spring: 
+  mvc: 
+    view: 
+      prefix: /WEB-INF/views/
+      suffix: .jsp

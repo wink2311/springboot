@@ -7,7 +7,7 @@ spring boot 默认会加载 classpath:logback-spring.xml 或者 classpath:logbac
 	<!-- 文件输出格式 -->
 	<property name="PATTERN" value="%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) |-%-5level [%thread] %c [%L] -| %msg%n" />
 	<!-- test文件路径 -->
-	<property name="TEST_FILE_PATH" value="console" />
+	<property name="TEST_FILE_PATH" value="/log/test.log" />
 	<!-- pro文件路径 -->
 	<property name="PRO_FILE_PATH" value="/opt/test/log" />
 
